@@ -21,7 +21,7 @@ let date: string = rl.question('How old R U? Type date of birthday and todays(dd
     cons(math(tYear, tMonths, bYear, bMonths));
 
     function math(tYear:number, tMonth:number, bYear:number, bMonths:number):number{
-         let months:number = (tYear * 12 + tMonth) - (bYear * 12 - bMonths);
+         let months:number = (tYear * 12 + tMonth) - bYear * 12 - bMonths;
         return months;
     }
    
