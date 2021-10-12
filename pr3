@@ -1,0 +1,37 @@
+import * as rl from 'readline-sync';
+
+let arr: number[] = [3, 6, 1, 9, -1, 10, 4, 8, 7, 5];
+let arrSort: number[] = [];
+let index:number = 0;
+let min: number = arr[0];
+let qq: number = arr.length;
+let check: number = rl.question("");
+console.log(isNumberExist(arr, check));
+
+
+for(let j:number = 0 ; j<qq; j++){
+    for(let i:number = 0; i < arr.length; i++){
+        if (min > arr[i]) {
+            min = arr[i];            
+            index=arr.indexOf(min);
+        }
+    }
+    arrSort[j] = min;
+    arr.splice(index, 1);
+    // console.log("arr: "+arr);
+    // console.log("index: "+index);
+    min = arr[0];
+    index = 0;
+    // console.log(arrSort[j]);
+}
+
+// arrSort[i] = min;
+
+
+
+console.log(arrSort);
+
+function isNumberExist(mas:number[], check:number):boolean {
+    let result = mas.includes(+check);
+    return result;
+}
