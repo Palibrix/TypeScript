@@ -1,0 +1,4 @@
+let mas: number[] = [3, 2, 6, 4, 8];
+let sortMas: number[] = mas.sort((n1, n2) => n1 - n2);
+
+console.log(sortMas);
